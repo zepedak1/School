@@ -1,16 +1,22 @@
-import java.util.Scanner;
-
 public class test
 {
     public static void main(String[] args)
     {
-	Scanner scan = new Scanner(System.in);
-	double length = scan.nextDouble();
-	double width = scan.nextDouble();
-	double height = scan.nextDouble();
-	Rectangle rectangle1 = new Rectangle(length, width);
-	Box box1 = new Box(length, width, height);
-	rectangle1.print();
-	box1.print();
+	account[] accountList;
+	accountList = new account[10];
+	facultyAccount faculty = new facultyAccount(0);
+	studentAccount student = new studentAccount(0);
+	accountList[0] = faculty;
+	accountList[1] = student;
+	accountList[0].deposit(20);
+	accountList[1].deposit(25);
+	if (accountList[0] instanceof facultyAccount)
+	    {
+		((facultyAccount)accountList[0]).info();
+	    }
+	if (accountList[1] instanceof studentAccount)
+	    {
+		((studentAccount)accountList[1]).info();
+	    }
     }
 }
