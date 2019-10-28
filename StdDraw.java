@@ -185,15 +185,15 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         JMenuItem menuItem1 = new JMenuItem(" Save...   ");
         menuItem1.addActionListener(std);
         menuItem1.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S,
-							Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
+                                Toolkit.getDefaultToolkit().getMenuShortcutKeyMask()));
         menu.add(menuItem1);
         return menuBar;
     }
 
 
-    /*************************************************************************
-     *  User and screen coordinate systems
-     *************************************************************************/
+   /*************************************************************************
+    *  User and screen coordinate systems
+    *************************************************************************/
 
     /**
      * Set the X scale to be the default
@@ -273,8 +273,8 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
      * Set the pen color to the given color. The available pen colors are 
        BLACK, BLUE, CYAN, DARK_GRAY, GRAY, GREEN, LIGHT_GRAY, MAGENTA, 
        ORANGE, PINK, RED, WHITE, and YELLOW.
-       * @param color the Color to make the pen
-       */
+     * @param color the Color to make the pen
+     */
     public static void setPenColor(Color color) {
         penColor = color;
         offscreen.setColor(penColor);
@@ -291,9 +291,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     public static void setFont(Font f) { font = f; }
 
 
-    /*************************************************************************
-     *  Drawing geometric shapes.
-     *************************************************************************/
+   /*************************************************************************
+    *  Drawing geometric shapes.
+    *************************************************************************/
 
     /**
      * Draw a line from (x0, y0) to (x1, y1)
@@ -487,9 +487,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 
 
 
-    /*************************************************************************
-     *  Drawing images.
-     *************************************************************************/
+   /*************************************************************************
+    *  Drawing images.
+    *************************************************************************/
 
     // get an image from the given filename
     private static Image getImage(String filename) {
@@ -577,9 +577,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         if (ws <= 1 && hs <= 1) pixel(x, y);
         else {
             offscreen.drawImage(image, (int) Math.round(xs - ws/2.0),
-				(int) Math.round(ys - hs/2.0),
-				(int) Math.round(ws),
-				(int) Math.round(hs), null);
+                                       (int) Math.round(ys - hs/2.0),
+                                       (int) Math.round(ws),
+                                       (int) Math.round(hs), null);
         }
         show();
     }
@@ -607,18 +607,18 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 
         offscreen.rotate(Math.toRadians(-degrees), xs, ys);
         offscreen.drawImage(image, (int) Math.round(xs - ws/2.0),
-			    (int) Math.round(ys - hs/2.0),
-			    (int) Math.round(ws),
-			    (int) Math.round(hs), null);
+                                   (int) Math.round(ys - hs/2.0),
+                                   (int) Math.round(ws),
+                                   (int) Math.round(hs), null);
         offscreen.rotate(Math.toRadians(+degrees), xs, ys);
 
         show();
     }
 
 
-    /*************************************************************************
-     *  Drawing text.
-     *************************************************************************/
+   /*************************************************************************
+    *  Drawing text.
+    *************************************************************************/
 
     /**
      * Write the given text string in the current font, center on (x, y).
@@ -664,9 +664,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
 
-    /*************************************************************************
-     *  Save drawing to a file.
-     *************************************************************************/
+   /*************************************************************************
+    *  Save drawing to a file.
+    *************************************************************************/
 
     /**
      * Save to file - suffix must be png, jpg, or gif.
@@ -717,9 +717,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }
 
 
-    /*************************************************************************
-     *  Mouse interactions.
-     *************************************************************************/
+   /*************************************************************************
+    *  Mouse interactions.
+    *************************************************************************/
 
     /**
      * Is the mouse being pressed?
@@ -786,9 +786,9 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
     }    
 
 
-    /*************************************************************************
-     *  Keyboard interactions.
-     *************************************************************************/
+   /*************************************************************************
+    *  Keyboard interactions.
+    *************************************************************************/
 
     /**
      * Has the user typed a key?
